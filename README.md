@@ -26,59 +26,45 @@ This repository implements a **React microfrontend architecture** using:
 ✅ **Node.js** → v18+ recommended  
 ✅ **pnpm** → install globally if you don’t have it:
 
-```bash
+
 npm install -g pnpm
 ✅ Git → clone the repository:
 
-bash
-Copy
-Edit
+
 git clone https://github.com/urikhaimov/my-microfrontend-monorepo.git
 cd my-microfrontend-monorepo
 🚀 Setup Instructions
 1️⃣ Install dependencies
 At the monorepo root, run:
 
-bash
-Copy
-Edit
+
 pnpm install
 This installs all dependencies and links the shell + widgetMetrics workspaces.
 
 2️⃣ Build + preview the remote
 The shell needs the built remote for federation to work.
 
-bash
-Copy
-Edit
+
 pnpm --filter widgetMetrics build
 pnpm --filter widgetMetrics preview
 ✅ This serves the remote at:
 
-bash
-Copy
-Edit
+
 http://localhost:4174/assets/remoteEntry.js
 3️⃣ Run the shell app
 In a second terminal:
 
-bash
-Copy
-Edit
+
 pnpm --filter shell dev
 ✅ Visit:
 
-arduino
-Copy
-Edit
+
 http://localhost:5173/
 ✅ The shell will dynamically load the remote widget at runtime.
 
 🌐 Production Build & Deploy
 Build both apps:
-bash
-Copy
-Edit
+
 pnpm --filter shell build
 pnpm --filter widgetMetrics build
 Deploy the built dist/ folders:
@@ -87,9 +73,7 @@ Shell → deploy to your main hosting (Netlify, Vercel, GitHub Pages, etc.)
 Remote → deploy widgetMetrics/dist and ensure remoteEntry.js is publicly reachable
 
 Update the shell’s vite.config.ts:
-ts
-Copy
-Edit
+
 remotes: {
   widgetMetrics: 'https://your-remote-domain.com/assets/remoteEntry.js'
 }
@@ -122,12 +106,6 @@ MIT © 2025 Uri Khaimov
 
 💬 Contact
 If you have any questions or need support, feel free to reach out via GitHub or open an issue.
-
-yaml
-Copy
-Edit
-
----
 
 ### ✅ What’s included:
 ✅ Prerequisites  
