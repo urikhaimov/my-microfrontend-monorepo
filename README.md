@@ -19,32 +19,7 @@ This repository implements a **React microfrontend architecture** using:
 
 ## 📂 Project Structure
 
-## 📂 Project Structure (from `tree`)
 
-.
-├── package.json
-├── pnpm-workspace.yaml
-├── README.md
-└── packages
-    ├── shell
-    │   ├── index.html
-    │   ├── package.json
-    │   ├── src
-    │   │   ├── App.tsx
-    │   │   ├── main.tsx
-    │   │   └── components
-    │   │       └── ...
-    │   └── vite.config.ts
-    └── widgetMetrics
-        ├── index.html
-        ├── package.json
-        ├── src
-        │   ├── WidgetApp.tsx
-        │   └── main.tsx
-        └── vite.config.ts
-
-
----
 
 ## 🛠 Prerequisites
 
