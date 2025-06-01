@@ -1,0 +1,26 @@
+{
+  "name": "my-microfrontend-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "@originjs/vite-plugin-federation": "^1.2.1"
+  },
+  "scripts": {
+    "install:all": "pnpm install",
+    "dev:shell": "pnpm --filter shell dev",
+    "dev:remote": "pnpm --filter widgetMetrics dev",
+    "build:shell": "pnpm --filter shell build",
+    "build:remote": "pnpm --filter widgetMetrics build",
+    "preview:shell": "pnpm --filter shell preview",
+    "preview:remote": "pnpm --filter widgetMetrics preview"
+  }
+}
