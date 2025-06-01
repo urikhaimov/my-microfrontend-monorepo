@@ -19,22 +19,30 @@ This repository implements a **React microfrontend architecture** using:
 
 ## 📂 Project Structure
 
-my-microfrontend-monorepo/
-├── package.json → Root monorepo config with workspaces
-├── pnpm-workspace.yaml → pnpm workspace setup
-├── packages/
-│ ├── shell/ → Main host app
-│ │ ├── package.json
-│ │ ├── vite.config.ts
-│ │ └── src/
-│ └── widgetMetrics/ → Remote widget microfrontend
-│ ├── package.json
-│ ├── vite.config.ts
-│ └── src/
+## 📂 Project Structure (from `tree`)
 
-yaml
-Copy
-Edit
+.
+├── package.json
+├── pnpm-workspace.yaml
+├── README.md
+└── packages
+    ├── shell
+    │   ├── index.html
+    │   ├── package.json
+    │   ├── src
+    │   │   ├── App.tsx
+    │   │   ├── main.tsx
+    │   │   └── components
+    │   │       └── ...
+    │   └── vite.config.ts
+    └── widgetMetrics
+        ├── index.html
+        ├── package.json
+        ├── src
+        │   ├── WidgetApp.tsx
+        │   └── main.tsx
+        └── vite.config.ts
+
 
 ---
 
